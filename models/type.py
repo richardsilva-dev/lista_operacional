@@ -9,7 +9,11 @@ class Produto:
         tabela_prods = [
             {
                 "Tipo_produto": {
-                    tipo_bebida: {"Nome": nome, "Quantidade": quantidade, "Data": data}
+                    tipo_bebida: {
+                        "Nome": [nome],
+                        "Quantidade": [quantidade],
+                        "Data": [data],
+                    }
                 }
             }
         ]
