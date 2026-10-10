@@ -2,7 +2,7 @@ from abc import ABC
 
 
 class Produto(ABC):
-    def estrutura(self):
+    def dados_base(self):
         bebidas = [
             "coca 2l",
             "coca ls",
