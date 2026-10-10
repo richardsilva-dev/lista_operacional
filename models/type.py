@@ -1,20 +1,143 @@
-class Produto:
-    def __init___(self, tipo_prod, nome, quantidade, data):
-        self.tipo_prod = tipo_prod
-        self.nome = nome
-        self.quantidade = quantidade
-        self.data = data
+from abc import ABC
 
-    def estrutura(self, tipo_bebida, nome, quantidade, data):
-        tabela_prods = [
-            {
-                "Tipo_produto": {
-                    tipo_bebida: {
-                        "Nome": [nome],
-                        "Quantidade": [quantidade],
-                        "Data": [data],
-                    }
-                }
-            }
+
+class Produto(ABC):
+    def estrutura(self):
+        bebidas = [
+            "coca 2l",
+            "coca ls",
+            "coca 1l",
+            "coca 2l zero",
+            "coca 1l zero",
+            "coca lata",
+            "coca lata zero",
+            "guaraná 2l",
+            "guaraná 1l",
+            "guaraná 1l zero",
+            "guaraná 2l zero",
+            "guaraná lata",
+            "guaraná lata zero",
+            "fanta lata",
+            "fanta 2l",
+            "fanta 1l",
+            "soda 1l",
+            "soda 2l",
+            "soda lata",
+            "schwepps",
+            "água tônica",
+            "água tônica zero",
+            "sprit 2l",
+            "sprit 2l zero",
+            "sprit lata",
+            "sprit lata zero",
+            "red bull",
+            "red bull tropical",
+            "h20 limão",
+            "limoneto",
+            "brahma lata zero",
+            "ice",
+            "corona",
+            "budwiser",
+            "heineken long",
+            "heineken long zero",
+            "corona zero",
+            "império",
+            "michelob",
+            "stella",
+            "heineken 600ml",
+            "skol 600ml",
+            "brahma 600ml",
+            "original 600ml",
+            "spaten 600ml",
+            "bohemia 600ml",
+            "brahma duplo malte 600ml",
+            "campare",
+            "gim laranja",
+            "gim morango",
+            "gim branco",
+            "josé cuervo",
+            "montila",
+            "red label",
+            "black label",
+            "black white",
+            "white horse",
+            "chivas",
+            "dreher",
+            "old par",
+            "absolute",
+            "salinas",
+            "matuta",
+            "pitú",
+            "pitú gold",
+            "smirnoff bar",
+            "smirnoff salão",
+            "martine blanco",
+            "martine rosé",
+            "menta",
+            "curaçãu blue",
+            "passport",
+            "teatcher",
+            "triunfo",
+            "germana",
+            "são francisco",
+            "sagatiba",
+            "jack daniels",
+            "quinta do morgado",
+            "pérgola",
+            "periquita",
+            "rapariga da quinta",
+            "casal garcia",
+            "reservado branco",
+            "reservado carbenet",
         ]
-        return tabela_prods
+
+        descartáveis = [
+            "copo 200ml",
+            "copo 400ml",
+            "copo 100ml",
+            "canudo de suco",
+            "canudo de nevada",
+            "colher",
+            "garrafa de suco",
+            "saco de lixo",
+        ]
+
+        polpas = [
+            "polpa de morango",
+            "polpa de maracujá",
+            "polpa de graviola",
+            "polpa de cajá",
+            "polpa de cajú",
+            "polpa de uva",
+            "polpa de manga",
+            "polpa de abacaxi",
+            "polpa de abacaxi c/ hortelã",
+            "polpa de imbú",
+            "polpa de goiaba",
+            "polpa de acerola",
+            "polpa de açaí",
+            "polpa de açaí detonador",
+            "polpa de clorofila",
+            "polpa de morango turbinado",
+            "polpa de cupuaçú",
+            "polpa guaranaçaí",
+        ]
+
+        frutas = [
+            "laranja",
+            "limão",
+            "maracujá(balde)",
+            "abacaxi(balde)",
+            "kiwi",
+            "morango",
+        ]
+        ingredientes_de_preparos = ["leite condensado", "leite", "nescal"]
+        lista_estoque = [
+            bebidas,
+            descartáveis,
+            polpas,
+            frutas,
+            ingredientes_de_preparos,
+        ]
+
+        return lista_estoque
