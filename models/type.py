@@ -132,12 +132,13 @@ class Produto(ABC):
             "morango",
         ]
         ingredientes_de_preparos = ["leite condensado", "leite", "nescal"]
+
         lista_estoque = [
-            bebidas,
-            descartáveis,
-            polpas,
-            frutas,
-            ingredientes_de_preparos,
+            {"bebidas": bebidas},
+            {"descartáveis": descartáveis},
+            {"polpas": polpas},
+            {"frutas": frutas},
+            {"ingredientes_de_preparos": ingredientes_de_preparos},
         ]
 
         return lista_estoque
