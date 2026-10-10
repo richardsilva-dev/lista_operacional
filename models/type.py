@@ -2,7 +2,23 @@ from abc import ABC
 
 
 class Produto(ABC):
-    def dados_base(self):
+    def __init__(self, nome, data, tipo_prod, quant):
+        self._nome = nome
+        self._data = data
+        self._tipo_prod = tipo_prod
+        self._quant = quant
+
+    
+    def estrutura(self, nome, data, tipo_prod, quant):
+      estr_lista = [
+        {"tipo_produto": tipo_prod}, 
+        {"nome": nome}, 
+        {"quantidade": quant}, 
+        {"data": data}]
+      return estr_lista
+    
+class Estoque:
+    def dados_base(self)-:
         bebidas = [
             "coca 2l",
             "coca ls",
