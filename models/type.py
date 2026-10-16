@@ -1,7 +1,10 @@
 from abc import ABC
 
+class List_Dictionary(ABC):
+    def __init__(self, list_dict):
+        self.list_dict = list_dict
 
-class Produto(ABC):
+class Produto():
     def __init__(self, nome, data, tipo_prod, quant):
         self._nome = nome
         self._data = data
