@@ -3,31 +3,37 @@ from multiprocessing import Value
 from re import error
 
 import pandas as pd
-from models.type import Produto
-from datetime import datetime, date, timedelta
-import service.erro_tratamento
+from datetime import datetime, date
+from models.type import List_Dictionary
 
 
-class Validar_Dados_registro(Produto):
-    def __init__(self, tipo_prod, nome, quantidade, data) -> None:
-        super().__init__(tipo_prod, nome, quantidade, data)
+class Validar_Dados_registro:
+    def validar(self, list_dict):
+        df = pd.DataFrame(list_dict)
+        caracteres = df.iloc[:, 0].str.len() < 50
+        caracteres2 = df.iloc[:, 2].str.len() < 50
+        valid_colunas = caracteres & caracteres2
+        validando_caract = (~valid_colunas).any()
+        assert not validando_caract, "ERRO: string muito grande!"
 
-    def validar(self, tipo_prod, nome, quantidade, data):
-        try:
-            if not all([tipo_prod, nome, quantidade, data]):
-                raise service.erro_tratamento.Str_Vazia
+        data_convert = pd.to_datetime(df.iloc[:, 1])
+        data_atual = date.today()
+        limite = pd.to_datetime(data_atual)
+        validando_data = data_convert < limite
+        # ex: [True, False, True ...] se a data for menor que a atual e não ultrapassada
 
-            data_atual = date.today()
-            data_convert = datetime.fromisoformat(data).date()
-            if data_convert > data_atual:
-                raise ValueError
-            if len(nome) > 40 or len(tipo_prod) > 40:
-                raise service.erro_tratamento.Str_Longa
+        verificar_data = (~validando_data).any()
+        # qualquer False será True com a converção (~) e vice-versa
+        # any() identifica algum True convertido
+        assert not verificar_data, "ERRO: Data inválida!"
 
-        except (TypeError, ValueError) as erro:
-            if erro == service.erro_tratamento.Str_Longa:
-                return "Erro: Nome muito grande"
-            elif erro == service.erro_tratamento.Str_Vazia:
-                return "Erro: Existe um dado vazio"
-            else:
-                return "Erro: Data inválida"
+        valor_vazio = df.isna().any().any()
+        assert not valor_vazio, "ERRO: Existem valore(s) vázio(s)"
+
+        valores_num_convert = pd.to_numeric(df.iloc[:, 3], errors="coerce")
+        validando_inteiro = valores_num_convert.isna().any()
+        assert (
+            not validando_inteiro
+        ), 'ERRO: existe um valor não númerico ou não inteiro na coluna "Quantidade"'
+
+        return list_dict
