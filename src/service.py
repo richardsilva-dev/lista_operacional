@@ -4,7 +4,6 @@ from re import error
 
 import pandas as pd
 from datetime import datetime, date
-from models.type import List_Dictionary
 
 
 class Validar_Dados_registro:
