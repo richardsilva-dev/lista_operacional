@@ -23,4 +23,5 @@ def main():
             )
             meus_produtos += minha_lista
 
-    persis_dados = Registro_dados(meus_produtos).adicionando_csv(meus_produtos)
+    persis_dados = 
+    print(persis_dados)
