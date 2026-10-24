@@ -7,7 +7,7 @@ from pandas.testing import assert_frame_equal
 import os
 
 from param import DataFrame
-from ..test import test_data_register_All
+import test.test_data_register_all
 
 
 class Registro_Dados:
@@ -41,18 +41,17 @@ class Buscar_Dados:
             raise PermissionError(f"não á permissão para acessar o arquivo: {arquivo}")
         # verificar se tem permissão para leitura, evitando o Permission erro futuramente
 
-        if test_data_register_All.test_verificar_xlsx_valido is not True:
+        if test.test_data_register_all.test_verificar_xlsx_valido is not True:
             raise BadZipFile("Falha no processamento do arquivo")
 
         try:
-            df = pd.read_excel("dados_base_estoque.xlsx", engine="openpyxl")
+            df = pd.read_excel("dados_base_estoque.xlsx")
             return df
         except PermissionError:
             print(
                 " O arquivo está aberto no Excel ou protegido. Feche-o e tente novamente."
             )
         except BadZipFile:
-            df = pd.read_csv("dados_base_estoque.csv")
-            return df
+            print("Erro : arquivo corrompido")
         except ImportError:
             print("instale dependencias : openpyxl")
