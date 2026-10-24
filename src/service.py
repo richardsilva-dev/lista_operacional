@@ -9,13 +9,13 @@ from datetime import datetime, date
 class Validar_Dados_registro:
     def validar(self, list_dict):
         df = pd.DataFrame(list_dict)
-        caracteres = df.iloc[:, 0].str.len() < 50
-        caracteres2 = df.iloc[:, 2].str.len() < 50
+        caracteres = df.iloc[:, 0].str.len() < 15
+        caracteres2 = df.iloc[:, 1].str.len() < 20
         valid_colunas = caracteres & caracteres2
         validando_caract = (~valid_colunas).any()
         assert not validando_caract, "ERRO: string muito grande!"
 
-        data_convert = pd.to_datetime(df.iloc[:, 1])
+        data_convert = pd.to_datetime(df.iloc[:, 3])
         data_atual = date.today()
         limite = pd.to_datetime(data_atual)
         validando_data = data_convert < limite
@@ -26,13 +26,18 @@ class Validar_Dados_registro:
         # any() identifica algum True convertido
         assert not verificar_data, "ERRO: Data inválida!"
 
-        valor_vazio = df.isna().any().any()
+        valor_vazio = (
+            df.isna().any().any()
+        )  # retorna um único valor booleano diretamente em vez de uma serie
         assert not valor_vazio, "ERRO: Existem valore(s) vázio(s)"
 
-        valores_num_convert = pd.to_numeric(df.iloc[:, 3], errors="coerce")
+        valores_num_convert = pd.to_numeric(df.iloc[:, 2], errors="coerce")
         validando_inteiro = valores_num_convert.isna().any()
+        apenas_inteiros = df.iloc[:, 2].dropna().apply(float.is_integer).all()
+        validacao_final = validando_inteiro & apenas_inteiros
+        convert = (~validacao_final).any()
         assert (
-            not validando_inteiro
+            not convert
         ), 'ERRO: existe um valor não númerico ou não inteiro na coluna "Quantidade"'
 
-        return list_dict
+        return True
