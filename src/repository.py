@@ -1,13 +1,14 @@
-from gzip import BadGzipFile
 from zipfile import BadZipFile
 
 from iniconfig import ParseError
+
 import pandas as pd
+
 from pandas.testing import assert_frame_equal
+
 import os
 
-from param import DataFrame
-import test.test_data_register_all
+import tests.test_data_register_all
 
 
 class Registro_Dados:
@@ -29,28 +30,29 @@ class Registro_Dados:
 
 
 class Buscar_Dados:
-    @staticmethod
-    def buscando_dados_base():
-        arquivo = "dados_base_estoque.xlsx"
+    def __init__(self, arquivo):
+        self.arquivo = arquivo
 
-        if not os.path.exists(arquivo):
-            raise FileNotFoundError(f"arquivo: {arquivo} não encontrado")
+    def buscando_dados_base(self):
+
+        if not os.path.exists(self.arquivo):
+            raise FileNotFoundError(f"arquivo: {self.arquivo} não encontrado")
         # verficação de antemão se o arquivo existe
 
-        if not os.access(arquivo, os.R_OK):
-            raise PermissionError(f"não á permissão para acessar o arquivo: {arquivo}")
+        if not os.access(self.arquivo, os.R_OK):
+            raise PermissionError(
+                f"não á permissão para acessar o arquivo: {self.arquivo}"
+            )
         # verificar se tem permissão para leitura, evitando o Permission erro futuramente
 
-        if test.test_data_register_all.test_verificar_xlsx_valido is not True:
+        if tests.test_data_register_all.test_verificar_xlsx_valido is True:
             raise BadZipFile("Falha no processamento do arquivo")
 
         try:
-            df = pd.read_excel("dados_base_estoque.xlsx")
+            df = pd.read_excel(self.arquivo)
             return df
         except PermissionError:
-            print(
-                " O arquivo está aberto no Excel ou protegido. Feche-o e tente novamente."
-            )
+            print(" O arquivo está aberto ou protegido. Feche-o e tente novamente.")
         except BadZipFile:
             print("Erro : arquivo corrompido")
         except ImportError:
