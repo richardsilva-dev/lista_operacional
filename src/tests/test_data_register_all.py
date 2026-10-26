@@ -27,11 +27,7 @@ def test_verificar_xlsx_valido():
     Verifica se um arquivo XLSX é um ZIP válido e pode ser aberto pelo openpyxl.
     Retorna True se válido, False caso contrário.
     """
-    caminho_arquivo = "src/dados_base_estoque"
-    if not os.path.exists(caminho_arquivo):
-        print("Arquivo não encontrado.")
-        return False
-
+    caminho_arquivo = "src/dados_base_estoque.xlsx"
     # Testa se é um ZIP válido
     try:
         with zipfile.ZipFile(caminho_arquivo, "r") as zip_ref:
@@ -46,8 +42,6 @@ def test_verificar_xlsx_valido():
     # Testa se openpyxl consegue abrir
     try:
         wb = load_workbook(caminho_arquivo)
-    except Exception as e:
-        print(f"Erro ao abrir com openpyxl: {e}")
         return False
-
-    return True
+    except Exception as e:
+        return True

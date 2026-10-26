@@ -1,0 +1,121 @@
+tipo_produto,nome,quantidade,data
+Bebidas,coca 2l,2,2026-10-26
+Bebidas,coca ls,2,2026-10-26
+Bebidas,coca 1l,2,2026-10-26
+Bebidas,coca 2l zero,2,2026-10-26
+Bebidas,coca 1l zero,2,2026-10-26
+Bebidas,coca lata,2,2026-10-26
+Bebidas,coca lata zero,2,2026-10-26
+Bebidas,guaraná 2l,2,2026-10-26
+Bebidas,guaraná 1l,2,2026-10-26
+Bebidas,guaraná 1l zero,2,2026-10-26
+Bebidas,guaraná 2l zero,2,2026-10-26
+Bebidas,guaraná lata,2,2026-10-26
+Bebidas,guaraná lata zero,2,2026-10-26
+Bebidas,fanta lata,2,2026-10-26
+Bebidas,fanta 2l,2,2026-10-26
+Bebidas,fanta 1l,2,2026-10-26
+Bebidas,soda 1l,2,2026-10-26
+Bebidas,soda 2l,2,2026-10-26
+Bebidas,soda lata,2,2026-10-26
+Bebidas,schwepps,2,2026-10-26
+Bebidas,água tônica,2,2026-10-26
+Bebidas,água tônica zero,2,2026-10-26
+Bebidas,sprit 2l,2,2026-10-26
+Bebidas,sprit 2l zero,2,2026-10-26
+Bebidas,sprit lata,2,2026-10-26
+Bebidas,sprit lata zero,2,2026-10-26
+Bebidas,red bull,2,2026-10-26
+Bebidas,red bull tropical,2,2026-10-26
+Bebidas,h20 limão,2,2026-10-26
+Bebidas,limoneto,2,2026-10-26
+Bebidas,brahma lata zero,2,2026-10-26
+Bebidas,ice,2,2026-10-26
+Bebidas,corona,2,2026-10-26
+Bebidas,budwiser,2,2026-10-26
+Bebidas,heineken long,2,2026-10-26
+Bebidas,heineken long zero,2,2026-10-26
+Bebidas,corona zero,2,2026-10-26
+Bebidas,império,2,2026-10-26
+Bebidas,michelob,2,2026-10-26
+Bebidas,stella,2,2026-10-26
+Bebidas,heineken 600ml,2,2026-10-26
+Bebidas,skol 600ml,2,2026-10-26
+Bebidas,brahma 600ml,2,2026-10-26
+Bebidas,original 600ml,2,2026-10-26
+Bebidas,spaten 600ml,2,2026-10-26
+Bebidas,bohemia 600ml,2,2026-10-26
+Bebidas,brahma duplo malte 600ml,2,2026-10-26
+Bebidas,campare,2,2026-10-26
+Bebidas,gim laranja,2,2026-10-26
+Bebidas,gim morango,2,2026-10-26
+Bebidas,gim branco,2,2026-10-26
+Bebidas,josé cuervo,2,2026-10-26
+Bebidas,montila,2,2026-10-26
+Bebidas,red label,2,2026-10-26
+Bebidas,black label,2,2026-10-26
+Bebidas,black white,2,2026-10-26
+Bebidas,white horse,2,2026-10-26
+Bebidas,chivas,2,2026-10-26
+Bebidas,dreher,2,2026-10-26
+Bebidas,old par,2,2026-10-26
+Bebidas,absolute,2,2026-10-26
+Bebidas,salinas,2,2026-10-26
+Bebidas,matuta,2,2026-10-26
+Bebidas,pitú,2,2026-10-26
+Bebidas,pitú gold,2,2026-10-26
+Bebidas,smirnoff bar,2,2026-10-26
+Bebidas,smirnoff salão,2,2026-10-26
+Bebidas,martine blanco,2,2026-10-26
+Bebidas,martine rosé,2,2026-10-26
+Bebidas,menta,2,2026-10-26
+Bebidas,curaçãu blue,2,2026-10-26
+Bebidas,passport,2,2026-10-26
+Bebidas,teatcher,2,2026-10-26
+Bebidas,triunfo,2,2026-10-26
+Bebidas,germana,2,2026-10-26
+Bebidas,são francisco,2,2026-10-26
+Bebidas,sagatiba,2,2026-10-26
+Bebidas,jack daniels,2,2026-10-26
+Bebidas,quinta do morgado,2,2026-10-26
+Bebidas,pérgola,2,2026-10-26
+Bebidas,periquita,2,2026-10-26
+Bebidas,rapariga da quinta,2,2026-10-26
+Bebidas,casal garcia,2,2026-10-26
+Bebidas,reservado branco,2,2026-10-26
+Bebidas,reservado carbenet,2,2026-10-26
+Descartáveis,copo 200ml,2,2026-10-26
+Descartáveis,copo 400ml,2,2026-10-26
+Descartáveis,copo 100ml,2,2026-10-26
+Descartáveis,canudo de suco,2,2026-10-26
+Descartáveis,canudo de nevada,2,2026-10-26
+Descartáveis,colher,2,2026-10-26
+Descartáveis,garrafa de suco,2,2026-10-26
+Descartáveis,saco de lixo,2,2026-10-26
+Polpas,polpa de morango,2,2026-10-26
+Polpas,polpa de maracujá,2,2026-10-26
+Polpas,polpa de graviola,2,2026-10-26
+Polpas,polpa de cajá,2,2026-10-26
+Polpas,polpa de cajú,2,2026-10-26
+Polpas,polpa de uva,2,2026-10-26
+Polpas,polpa de manga,2,2026-10-26
+Polpas,polpa de abacaxi,2,2026-10-26
+Polpas,polpa de abacaxi c/ hortelã,2,2026-10-26
+Polpas,polpa de imbú,2,2026-10-26
+Polpas,polpa de goiaba,2,2026-10-26
+Polpas,polpa de acerola,2,2026-10-26
+Polpas,polpa de açaí,2,2026-10-26
+Polpas,polpa de açaí detonador,2,2026-10-26
+Polpas,polpa de clorofila,2,2026-10-26
+Polpas,polpa de morango turbinado,2,2026-10-26
+Polpas,polpa de cupuaçú,2,2026-10-26
+Polpas,polpa guaranaçaí,2,2026-10-26
+Frutas,laranja,2,2026-10-26
+Frutas,limão,2,2026-10-26
+Frutas,maracujá(balde),2,2026-10-26
+Frutas,abacaxi(balde),2,2026-10-26
+Frutas,kiwi,2,2026-10-26
+Frutas,morango,2,2026-10-26
+Ingredientes de preparos,leite condensado,2,2026-10-26
+Ingredientes de preparos,leite,2,2026-10-26
+Ingredientes de preparos,nescal,2,2026-10-26

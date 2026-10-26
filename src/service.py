@@ -33,11 +33,12 @@ class Validar_Dados_registro:
 
         valores_num_convert = pd.to_numeric(df.iloc[:, 2], errors="coerce")
         validando_inteiro = valores_num_convert.isna().any()
-        apenas_inteiros = df.iloc[:, 2].dropna().apply(float.is_integer).all()
-        validacao_final = validando_inteiro & apenas_inteiros
-        convert = (~validacao_final).any()
+        apenas_inteiros = (
+            df.iloc[:, 2].dropna().apply(lambda x: isinstance(x, int)).all()
+        )
+        validacao_final = ~((~apenas_inteiros) | validando_inteiro.any())
         assert (
-            not convert
+            validacao_final
         ), 'ERRO: existe um valor não númerico ou não inteiro na coluna "Quantidade"'
 
         return True
