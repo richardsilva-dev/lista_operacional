@@ -9,8 +9,8 @@ from datetime import datetime, date
 class Validar_Dados_registro:
     def validar(self, list_dict):
         df = pd.DataFrame(list_dict)
-        caracteres = df.iloc[:, 0].str.len() < 15
-        caracteres2 = df.iloc[:, 1].str.len() < 20
+        caracteres = df.iloc[:, 0].str.len() < 30
+        caracteres2 = df.iloc[:, 1].str.len() < 30
         valid_colunas = caracteres & caracteres2
         validando_caract = (~valid_colunas).any()
         assert not validando_caract, "ERRO: string muito grande!"
@@ -18,7 +18,7 @@ class Validar_Dados_registro:
         data_convert = pd.to_datetime(df.iloc[:, 3])
         data_atual = date.today()
         limite = pd.to_datetime(data_atual)
-        validando_data = data_convert < limite
+        validando_data = data_convert <= limite
         # ex: [True, False, True ...] se a data for menor que a atual e não ultrapassada
 
         verificar_data = (~validando_data).any()
