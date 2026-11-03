@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Lista Operacional
 
 Sistema desenvolvido em Python para registrar e organizar quantidades de produtos, permitindo transformar os dados inseridos em uma tabela e armazená-los em um arquivo CSV.
