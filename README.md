@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Lista Operacional
 
 Sistema desenvolvido em Python para registrar e organizar quantidades de produtos, permitindo transformar os dados inseridos em uma tabela e armazená-los em um arquivo CSV.
@@ -104,3 +105,7 @@ Projeto em desenvolvimento.
 ---
 
 **Lista Operacional** — Aplicação desenvolvida para praticar Python, manipulação de dados e armazenamento de informações utilizando CSV e Pandas.
+=======
+# lista_operacional
+projeto CRUD para realizar levantamentos de produtos de estoque .
+>>>>>>> 04b400c1ae7591c31a9f17517e4f6700673a43c3

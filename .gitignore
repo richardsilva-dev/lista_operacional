@@ -1,3 +1,8 @@
-.venv/
+.pytest_cache/
 __pycache__/
+.vscode/
+.venv/
+
+dados_base_estoque.xlsx
 dados_registro.csv
+test_dados.csv

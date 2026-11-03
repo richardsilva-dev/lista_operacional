@@ -84,7 +84,8 @@ Essas informações são organizadas internamente em registros que contêm:
 
 - Nome do produto.
 - Tipo ou categoria do produto.
-- Quantidade informada.
+- Quantidad
+e informada.
 - Data do registro.
 
 Cada registro representa um produto contabilizado no levantamento.
