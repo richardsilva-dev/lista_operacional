@@ -4,5 +4,5 @@ __pycache__/
 .venv/
 
 dados_base_estoque.xlsx
-dados_registro.csv
+dados_registros.csv
 test_dados.csv

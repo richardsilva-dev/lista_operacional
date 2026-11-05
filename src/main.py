@@ -1,7 +1,7 @@
 from models import Produto
 import datetime
 import repository
-from service import Validar_Dados_registro
+from validation_data.service import Validar_Dados_registro
 import pandas as pd
 
 
@@ -9,7 +9,7 @@ def main():
     print("""<><><> PROJETO CRUD <><><> \n\n[]Levantamento de bebidas-Pizzaria\n""")
 
     df_estoque = repository.Buscar_Dados(
-        "src/dados_base_estoque.xlsx"
+        "dados_base_estoque.xlsx"
     ).buscando_dados_base()
     data_atual = datetime.date.today()
     data_formatada = data_atual.isoformat()

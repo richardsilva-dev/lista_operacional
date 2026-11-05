@@ -8,7 +8,10 @@ version = "0.1.0"
 description = "Ferramenta especifica que recebe e valida dados de estoque."
 readme = "README.md"
 requires-python = ">=3.10"
-dependencies = ["pandas>=2.0"]
+dependencies = [
+    "pandas>=2.0",
+    "validation-data @ git+https://github.com/richardsilva-dev/validation-data.git@service",
+]
 
 [tool.hatch.envs.test]
 dependencies_options = ["pytest"]
